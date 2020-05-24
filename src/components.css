@@ -1,0 +1,62 @@
+/* Scroll down animation */
+
+@keyframes bounceAlpha {
+    0% {opacity: 1; transform: translateX(0px) scale(1);}
+    15%{opacity: 0; transform:translateX(10px) scale(0.9);}
+    16%{opacity: 0; transform:translateX(-10px) scale(0.9);}
+    35% {opacity: 1; transform: translateX(0px) scale(1);}
+    }
+    
+    .bounceAlpha {
+      animation-name: bounceAlpha;
+      animation-duration:2.4s;
+      animation-iteration-count:infinite;
+      animation-timing-function:linear;
+    }
+    
+    .arrow.primera.bounceAlpha {
+      animation-name: bounceAlpha;
+      animation-duration:2.4s;
+      animation-delay:0.3s;
+      animation-iteration-count:infinite;
+      animation-timing-function:linear;
+    }
+    
+    .round .arrow{
+      animation-name: bounceAlpha;
+      animation-duration:2.4s;
+      animation-iteration-count:infinite;
+      animation-timing-function:linear;
+    }
+    .round .arrow.primera{
+      animation-name: bounceAlpha;
+      animation-duration:2.4s;
+      animation-delay:0.3s;
+      animation-iteration-count:infinite;
+      animation-timing-function:linear;
+    }
+
+/* Scroll to top animation */
+  .scroll-to-top {
+    position: fixed;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    padding:1em;
+    animation: fadeIn 2s ease-in-out 2s both;
+    cursor: pointer;
+  }
+
+  .scrollTopArrow {
+    height: 30px;
+    width: 30px;
+    transform: rotate(270deg);
+  }
+    
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

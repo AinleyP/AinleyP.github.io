@@ -1,5 +1,7 @@
 import React from 'react'
 import HomeHeader from '../components/HomeHeader'
+import Footer from '../components/Footer'
+import ScrollButton from '../components/ScrollToTop'
 import { Project } from '../components/Project'
 import { ProjectItem } from "../types"
 
@@ -59,12 +61,15 @@ function HomePage() {
     return (
         <div>
             <HomeHeader />
+            <ScrollButton />
 
             <Project projects={project[0]} />
             <Project projects={project[1]} />
             <Project projects={project[2]} />
             <Project projects={project[3]} />
             <Project projects={project[4]} />
+
+            <Footer />
 
         </div >
     )
