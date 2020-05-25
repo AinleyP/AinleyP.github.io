@@ -15,22 +15,26 @@ const floatEffect = keyframes`
 
 const Container = styled.div`
     .bigboy {
-        margin: 0.5% 10.5%;
+        margin: 1% 10.5% 0% 10.5%;
         text-align: center;
     }
     .image-animation {
         animation: ${floatEffect} infinite 5.0s linear;
+        width: 90%;
+        height: auto;
     }
 `
 
 const HeaderText = styled.div`
-margin-top: 40%;
+margin-top: 30%;
 text-align: left;
 ul {
+    font-size:1.1em;
     list-style: none;
     padding-left: 0em;
 }
 `
+
 
 const ScrollDown = styled.div`
   .center-con {
@@ -60,13 +64,21 @@ const ScrollDown = styled.div`
     
 `
 
+const VerticalLine = styled.div`
+background-image: linear-gradient(#000, #000);
+background-size: 1.7px 100%;
+background-repeat: no-repeat;
+background-position: center center;
+padding:4em;
+margin-top:2%;
+`
 
 export default function HomeHeader() {
     return (
         <React.Fragment>
             <Container >
                 <Row className="bigboy">
-                    <Col xs={12} md={6}>
+                    <Col xs={12} sm={12} md={6}>
                         <HeaderText>
                             <h1>ainley pena.</h1>
                             <ul>
@@ -76,7 +88,7 @@ export default function HomeHeader() {
                             </ul>
                         </HeaderText>
                     </Col>
-                    <Col xs={12} md={6}>
+                    <Col xs={12} sm={12} md={6}>
                         <Image fluid alt="header-image" className="image-animation" src={require('../assets/ap-header.png')} />
                     </Col>
                 </Row>
@@ -91,6 +103,10 @@ export default function HomeHeader() {
                     </div>
                 </div>
             </ScrollDown>
+            <VerticalLine>
+
+            </VerticalLine>
+
 
         </React.Fragment>
 

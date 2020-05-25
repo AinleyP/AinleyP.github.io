@@ -1,53 +1,38 @@
 import React, { FC } from 'react'
 import { ProjectItem } from "../types"
 import styled from 'styled-components'
-import { Image, Row, Col, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Image } from 'react-bootstrap';
 
 
-const CardContainer = styled.div`
-margin: 9% 10%;
+const GridContainer = styled.div`
+    .project-button {
+        position: relative;
+        margin: auto;
+        overflow: hidden;
+    }
+    
+    
+`
+
+const ProjectContainer = styled.div`
 box-shadow: 0 0 15px 5px rgba(0,0,0,0.1);
 -moz-box-shadow: 0 0 15px 5px rgba(0,0,0,0.1);
 -webkit-box-shadow: 0 0 15px 5px  rgba(0,0,0,0.1);
 -o-box-shadow: 0 0 15px 5px  rgba(0,0,0,0.1);
 border-radius: 8px;
-.grey-text {
-    color: #808080
-
-
-}
 `
 
 const ImageContainer = styled.div`
-width:90% 
+width:100% 
 height:100%
 `
 
-// const Image = styled.img`
-// width:auto
-// height: 450px
-// `
 
-const ProjectText = styled.div`
-padding: 40% 0% 10% 10%;
 
+const LinkContainer = styled.a`
 `
 
-const ViewButton = styled(Button)`
-  background-color: transparent;
-  border: 2px solid #000000;
-  border-color: #000000;
-  transition: background-color 0.5s ease;
-  color: #000000;
-  margin: 7% 0% !important;
-
-  &:hover {
-    border: 2px solid #000000 !important;
-    background-color: #000000;
-    color: #fff;
-    text-decoration:none;
-  }
+const ProjectImage = styled(Image)`
 `
 
 export interface IProject {
@@ -57,28 +42,22 @@ export interface IProject {
 export const Project: React.FC<IProject> = ({ projects }) => {
     return (
         <React.Fragment>
-            <CardContainer>
-                <Row>
-                    <Col xs={12} md={4}>
-                        <ProjectText>
-                            <p className='grey-text'>{projects.type}</p>
-                            <h2>{projects.name}</h2>
-                            <ViewButton href={projects.link} target={projects.target}>
-                                <span>{projects.linkText}</span>
-                            </ViewButton>
-                        </ProjectText>
+            <GridContainer>
+                <ProjectContainer className="project-button">
+                    <LinkContainer href={projects.link} target={projects.target}>
+                        <ProjectImage fluid alt={projects.name} src={require(`../assets/${projects.image}`)} />
+                        <div className="content-overlay ">
+                            <div className="content-details fadeInTop">
+                                <p>{projects.type}</p>
+                                <h2 className="content-title">{projects.name}</h2>
+                                <p className="content-text">{projects.linkText}</p>
+                            </div>
+                        </div>
+                    </LinkContainer>
+                </ProjectContainer>
+            </GridContainer>
 
-                    </Col>
-                    <Col xs={12} md={8}>
-                        <ImageContainer>
-                            <Image fluid alt={projects.name} src={require(`../assets/${projects.image}`)} />
-                        </ImageContainer>
-                    </Col>
-                </Row>
-
-            </CardContainer>
-
-        </React.Fragment>
+        </React.Fragment >
     )
 }
 

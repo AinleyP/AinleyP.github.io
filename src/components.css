@@ -41,15 +41,18 @@
     position: fixed;
     bottom: 0.5rem;
     right: 0.5rem;
-    padding:1em;
+    margin: 1%;
     animation: fadeIn 2s ease-in-out 2s both;
     cursor: pointer;
+
+
   }
 
   .scrollTopArrow {
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     transform: rotate(270deg);
+
   }
     
   @keyframes fadeIn {
@@ -60,3 +63,115 @@
       opacity: 1;
     }
   }
+
+
+/*Project Cards */
+
+.project-button .content-overlay {
+  background: #5d5d5d ;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.1s ease-in-out 0s;
+  -moz-transition: all 0.1s ease-in-out 0s;
+  transition: all 0.1s ease-in-out 0s;
+  transform: scale(1)
+}
+
+.content-details{
+  position: absolute;
+  text-align: center;
+  height:100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.project-button:hover .content-overlay {
+  opacity: 0.9;
+  transition: transform 1s, filter 2s ease-in-out;
+
+}
+
+.project-button:hover .content-details{
+  top:25%;
+  opacity: 1;
+  -webkit-transform: translateY(-2%);
+  -moz-transform: translateY(-2%);
+  transform: translateY(-2%);
+  -webkit-transition: all 0.4s ease-in-out 0.1s;
+  -moz-transition: all 0.4s ease-in-out 0.1s;
+  transition: all 0.4s ease-in-out 0.1s;
+}
+
+.content-text {
+  margin: 0% 32% 0% 32%;
+  padding: 2% 0% 2% 0%;
+  border: 1px solid #fff;
+  border-radius:4px;
+}
+
+
+
+.content-details h2{
+  color: #fff;
+  letter-spacing: 0.09em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  font-size:2em;
+  
+}
+
+.content-details p{
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  
+}
+
+@media (max-width: 1520px) {
+  .content-details h2{
+    font-size:2em !important;
+  }
+  .content-details p{
+    font-size: 0.9rem !important;
+    
+  }
+}
+
+@media (max-width: 900px) {
+  .content-details h2{
+    font-size:1.7rem !important;
+  }
+  .content-details p{
+    font-size: 0.8rem !important;
+    
+  }
+}
+
+@media (max-width: 850px) {
+  .content-details h2{
+    font-size:1.2rem !important;
+  }
+  .content-details p{
+    font-size: 0.6rem !important;
+    
+  }
+}
+
+@media (max-width: 699px) {
+  .content-details h2{
+    font-size:2em !important;
+  }
+  .content-details p{
+    font-size: 0.9rem !important;
+    
+  
+  }
+}
+
+

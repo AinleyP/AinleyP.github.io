@@ -4,21 +4,23 @@ import Footer from '../components/Footer'
 import ScrollButton from '../components/ScrollToTop'
 import { Project } from '../components/Project'
 import { ProjectItem } from "../types"
+import styled from 'styled-components'
+
 
 const project: Array<ProjectItem> = [
     {
         name: 'Koinonia',
         type: 'Product Development',
-        linkText: 'View Case Study >>',
+        linkText: 'View Case Study',
         link: '/ProjKoinonia',
-        image: 'testimage.jpg',
+        image: 'noteify-mockup.png',
         DType: 'design',
         target: '_self'
     },
     {
         name: 'NoteIfy',
         type: 'Web App Development',
-        linkText: 'View on Github >>',
+        linkText: 'View on Github',
         link: 'https://github.com/AinleyP/NoteIfy',
         image: 'noteify-mockup.png',
         DType: 'dev',
@@ -27,8 +29,8 @@ const project: Array<ProjectItem> = [
     },
     {
         name: 'SDC',
-        type: 'UW Blueprint Project',
-        linkText: 'View Case Study >>',
+        type: 'Web App Development',
+        linkText: 'View Case Study',
         link: '/ProjSDC',
         image: 'sdc-mockup.png',
         DType: 'dev',
@@ -37,7 +39,7 @@ const project: Array<ProjectItem> = [
     {
         name: 'AWS Call Center',
         type: 'Infrastructure Development',
-        linkText: 'View on Github >>',
+        linkText: 'View on Github',
         link: 'https://github.com/AinleyP/call-center-application',
         image: 'aws-mockup.png',
         DType: 'dev',
@@ -47,7 +49,7 @@ const project: Array<ProjectItem> = [
     {
         name: 'FASSB Website',
         type: 'Product Development',
-        linkText: 'View Case Study >>',
+        linkText: 'View Case Study',
         link: '/ProjFassb',
         image: 'fassb-mockup.png',
         DType: 'design',
@@ -56,6 +58,21 @@ const project: Array<ProjectItem> = [
     }
 ]
 
+const ProjectHeader = styled.div`
+    padding: 3% 3% 3% 3%;
+`
+
+const ProjectGrid = styled.div`
+    max-width: 1800px;
+    margin: 0% 10.5%;
+    display: grid;
+    grid-gap:2em;
+    @media (min-width: 700px) {
+        grid-template-columns: repeat(2, 1fr); 
+      }
+`
+
+
 function HomePage() {
 
     return (
@@ -63,11 +80,18 @@ function HomePage() {
             <HomeHeader />
             <ScrollButton />
 
-            <Project projects={project[0]} />
-            <Project projects={project[1]} />
-            <Project projects={project[2]} />
-            <Project projects={project[3]} />
-            <Project projects={project[4]} />
+            <ProjectHeader>
+                <h3> Welcome to the playground of my design and coding projects! </h3>
+            </ProjectHeader>
+
+            <ProjectGrid>
+                <Project projects={project[0]} />
+                <Project projects={project[1]} />
+                <Project projects={project[2]} />
+                <Project projects={project[3]} />
+                <Project projects={project[4]} />
+            </ProjectGrid>
+
 
             <Footer />
 

@@ -9,7 +9,7 @@ const Styles = styled.div`
       background-color: #222; }
   a, .navbar-nav, .navbar-light .nav-link {
     color: #000;
-    &:hover { color: #f43421; }
+    &:hover { color: #efb85c; }
   }
   .navbar-brand {
     font-size: 1.4em;
@@ -62,14 +62,15 @@ function NavigationBar() {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ml-auto">
                             <NavItem className="hoverFloat">
+                                <Nav.Link as={Link} to="/">home</Nav.Link>
+                            </NavItem>
+                            <NavItem className="hoverFloat">
                                 <Nav.Link as={Link} to="/about">about</Nav.Link>
                             </NavItem>
                             <NavItem className="hoverFloat">
                                 <Nav.Link as={Link} to="/ooo">ooo</Nav.Link>
                             </NavItem>
-                            <NavItem className="hoverFloat">
-                                <Nav.Link as={Link} to="/work">home</Nav.Link>
-                            </NavItem>
+
                             <NavItem className="hoverFloat">
                                 <Nav.Link as={Link} to="/work">resume</Nav.Link>
                             </NavItem>

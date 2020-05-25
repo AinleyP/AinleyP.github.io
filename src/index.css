@@ -40,6 +40,10 @@ code {
        url('./fonts/dm-sans-v4-latin-700.svg#DMSans') format('svg'); /* Legacy iOS */
 }
 
+.nav-container {
+  font-family: 'DM Sans';
+}
+
 h2 {
   font-family: 'DM Sans';
   font-weight: 700;
@@ -54,10 +58,26 @@ h1 {
 
 }
 
+h3 {
+  font-family: 'DM Sans';
+  text-align: center;
+  font-size: 1.3em;
+}
+
 p{
   text-align: left;
+  font-family: 'DM Sans';
+  font-weight: 400;
 }
 
 li {
   text-align: left;
+  font-family: 'DM Sans';
+  font-weight: 400;
+}
+
+p::selection, h1::selection, ul::selection, h2::selection, h3::selection, li::selection {
+  background: #967bb6;
+  color: white;
+  
 }
