@@ -68,10 +68,6 @@ function NavigationBar() {
                                 <Nav.Link as={Link} to="/about">about</Nav.Link>
                             </NavItem>
                             <NavItem className="hoverFloat">
-                                <Nav.Link as={Link} to="/ooo">ooo</Nav.Link>
-                            </NavItem>
-
-                            <NavItem className="hoverFloat">
                                 <Nav.Link as={Link} to="/work">resume</Nav.Link>
                             </NavItem>
 

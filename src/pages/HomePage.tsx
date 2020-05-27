@@ -1,6 +1,5 @@
 import React from 'react'
 import HomeHeader from '../components/HomeHeader'
-import Footer from '../components/Footer'
 import ScrollButton from '../components/ScrollToTop'
 import { Project } from '../components/Project'
 import { ProjectItem } from "../types"
@@ -13,7 +12,7 @@ const project: Array<ProjectItem> = [
         type: 'Product Development',
         linkText: 'View Case Study',
         link: '/ProjKoinonia',
-        image: 'noteify-mockup.png',
+        image: 'koinonia-mockup.png',
         DType: 'design',
         target: '_self'
     },
@@ -66,7 +65,7 @@ const ProjectGrid = styled.div`
     max-width: 1800px;
     margin: 0% 10.5%;
     display: grid;
-    grid-gap:2em;
+    grid-gap:3em;
     @media (min-width: 700px) {
         grid-template-columns: repeat(2, 1fr); 
       }
@@ -93,7 +92,6 @@ function HomePage() {
             </ProjectGrid>
 
 
-            <Footer />
 
         </div >
     )
