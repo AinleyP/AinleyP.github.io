@@ -49,7 +49,7 @@ const project: Array<ProjectItem> = [
         name: 'FASSB Website',
         type: 'Product Development',
         linkText: 'View Case Study',
-        link: '/ProjFassb',
+        link: '/FassbPage',
         image: 'fassb-mockup.png',
         DType: 'design',
         target: '_self'
