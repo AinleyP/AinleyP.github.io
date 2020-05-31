@@ -42,9 +42,6 @@ const AboutText = styled.div`
         left:6%;
         top: 22%;
     }
-    &:after{
-       
-    }
     span {
         color: black;
     }

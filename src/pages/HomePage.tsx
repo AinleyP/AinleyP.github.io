@@ -4,6 +4,8 @@ import ScrollButton from '../components/ScrollToTop'
 import { Project } from '../components/Project'
 import { ProjectItem } from "../types"
 import styled from 'styled-components'
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 
 
 const project: Array<ProjectItem> = [
@@ -72,29 +74,43 @@ const ProjectGrid = styled.div`
 `
 
 
-function HomePage() {
-
-    return (
-        <div>
-            <HomeHeader />
-            <ScrollButton />
-
-            <ProjectHeader>
-                <h3> Welcome to the playground of my design and coding projects! </h3>
-            </ProjectHeader>
-
-            <ProjectGrid>
-                <Project projects={project[0]} />
-                <Project projects={project[1]} />
-                <Project projects={project[2]} />
-                <Project projects={project[3]} />
-                <Project projects={project[4]} />
-            </ProjectGrid>
+class HomePage extends React.Component<{}> {
 
 
+    componentDidMount() {
+        AOS.init({
+            duration: 1000
+        })
+    }
 
-        </div >
-    )
+    render() {
+        return (
+            <React.Fragment>
+                <HomeHeader />
+                <ScrollButton />
+
+
+                <ProjectHeader data-aos="fade-bottom">
+                    <h3> Welcome to the playground of my design and coding projects! </h3>
+                </ProjectHeader>
+
+
+
+                <ProjectGrid>
+                    <Project projects={project[0]} />
+                    <Project projects={project[1]} />
+                    <Project projects={project[2]} />
+                    <Project projects={project[3]} />
+                    <Project projects={project[4]} />
+                </ProjectGrid>
+
+
+
+            </React.Fragment >
+        )
+
+    }
+
 }
 
 export default HomePage

@@ -68,7 +68,7 @@ function NavigationBar() {
                                 <Nav.Link as={Link} to="/about">about</Nav.Link>
                             </NavItem>
                             <NavItem className="hoverFloat">
-                                <Nav.Link as={Link} to="/work">resume</Nav.Link>
+                                <Nav.Link target="_blank" href="https://drive.google.com/file/d/1yCnSoAng7bqsfo-9aMlZv_SxUWzojPDQ/view?usp=sharing">resume</Nav.Link>
                             </NavItem>
 
                         </Nav>

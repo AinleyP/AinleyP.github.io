@@ -64,6 +64,15 @@ h3 {
   font-size: 1.3em;
 }
 
+h5 {
+  font-family: 'DM Sans';
+  text-align: left;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #ffa721;
+
+}
+
 p{
   text-align: left;
   font-family: 'DM Sans';
