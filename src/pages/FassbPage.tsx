@@ -17,7 +17,10 @@ ul {
     margin-left:0;
 }
 .padding-left{
-    padding-left:2em;
+    padding-left:10%;
+    @media (max-width: 700px) {
+        padding-left: 15px;
+      }
 }
 
 `
@@ -48,6 +51,11 @@ text-align: left;
 margin: 2% 17% 2% 17%;
 `
 
+const NextProject = styled.div`
+text-align: center;
+padding-top: 10%
+`
+
 
 export default function FassbPage() {
     return (
@@ -68,7 +76,7 @@ export default function FassbPage() {
 
 
 
-                <RowContainer >
+                <RowContainer>
 
                     <Col md={4}>
                         <p><strong>POSITION:</strong></p>
@@ -77,7 +85,7 @@ export default function FassbPage() {
                         <p><strong>TIMELINE:</strong></p>
                         <p>Jan - Apr 2019</p>
                     </Col>
-                    <Col md={4}>
+                    <Col className="padding-left" md={5}>
                         <p><strong>METHODS:</strong></p>
 
                         <ul>
@@ -89,7 +97,7 @@ export default function FassbPage() {
                             <li>Post-It Activty</li>
                         </ul>
                     </Col>
-                    <Col md={3} >
+                    <Col className="padding-left" md={3} >
                         <p><strong>CODING:</strong></p>
 
                         <ul>
@@ -423,7 +431,13 @@ export default function FassbPage() {
                     </Col>
                 </RowContainer>
 
-
+                <RowContainer>
+                    <Col>
+                        <NextProject>
+                            <h6> <span><a href="/">Home</a></span> / Next Project: <span><a href="/ProjSDC">SDC</a></span></h6>
+                        </NextProject>
+                    </Col>
+                </RowContainer>
 
 
             </Container>

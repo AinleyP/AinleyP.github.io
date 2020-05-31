@@ -51,7 +51,7 @@ const project: Array<ProjectItem> = [
         name: 'FASSB Website',
         type: 'Product Development',
         linkText: 'View Case Study',
-        link: '/FassbPage',
+        link: '/ProjFassb',
         image: 'fassb-mockup.png',
         DType: 'design',
         target: '_self'
@@ -97,7 +97,7 @@ class HomePage extends React.Component<{}> {
 
 
                 <ProjectGrid data-aos="fade-up">
-                    <Project projects={project[0]} />
+                    {/* <Project projects={project[0]} /> */}
                     <Project projects={project[1]} />
                     <Project projects={project[2]} />
                     <Project projects={project[3]} />

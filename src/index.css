@@ -50,6 +50,10 @@ h2 {
 
 }
 
+a, a:hover{
+  color: #efb85c;
+}
+
 h1 {
   font-family: 'DM Sans';
   font-weight: 700;
@@ -70,7 +74,7 @@ h4 {
   font-size: 3.1em;
   font-weight: 700;
   padding-top: 5%;
-  color: #6c757d;
+  color: #7f7f7f;
 
 }
 
@@ -81,6 +85,10 @@ h5 {
   font-weight: 700;
   color: #ffa721;
 
+}
+
+h6 {
+  font-size: 1.3em;
 }
 
 p{

@@ -26,6 +26,9 @@ text-align: center;
 justify-content: center;
 margin-top:7%;
 margin-bottom:1%;
+p {
+    font-size:0.8em;
+}
 `
 
 
@@ -40,7 +43,7 @@ export default function Footer() {
                     <a href="https://linkedin.com/in/ainleypena" rel="noopener noreferrer" target="_blank">
                         <FaLinkedinIn />
                     </a>
-                    <a href="https://github.com/AinleyP" rel="noopener noreferrer" target="_blank">
+                    <a href="https://medium.com/@ainleypena" rel="noopener noreferrer" target="_blank">
                         <FaMediumM />
                     </a>
 

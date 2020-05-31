@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import blobOne from '../assets/yellowblob1.png'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
+import ScrollButton from '../components/ScrollToTop'
 
 const Container = styled.div`
 .bigboy {
@@ -88,7 +89,11 @@ class AboutPage extends React.Component<{}> {
 
         return (
             <React.Fragment>
+
                 <Container>
+
+                    <ScrollButton />
+
 
                     <Row className="bigboy" data-aos="fade-up">
                         <AboutText>
@@ -100,13 +105,12 @@ class AboutPage extends React.Component<{}> {
                                 is a journey of walking alongside the user, navigating through the problem space, and executing the
                                     vision with a memorable and lasting impression. </p>
                             <p>
-                                I am currently working as a Software Engineering Intern at Capital One and a Developer at UW Blueprint.
-                                I also have extensive knowledge in cloud infrastructure and deployment with certifications such as AWS Cloud Solutions Architect.
+                                My current interests lie within using cloud computing and technologies to develop highly efficient  and scalable products that meet the needs of the users.
                                 I am a student from the University of Waterloo studying Systems Design Engineering and I am
                                 currently looking for a 4-month internship for Winter 2021!
                                 </p>
                             <p>
-                                Let's chat! Feel free to contact me at aapena@uwaterloo.ca or check out my medium articles!
+                                Let's chat! Feel free to contact me at aapena@uwaterloo.ca or check out my <span><a target="_blank" href="https://medium.com/@ainleypena">medium articles</a></span>!
                                 </p>
                         </AboutText>
 
