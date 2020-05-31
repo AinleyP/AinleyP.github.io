@@ -12,8 +12,8 @@ const project: Array<ProjectItem> = [
     {
         name: 'Koinonia',
         type: 'Product Development',
-        linkText: 'View Case Study',
-        link: '/ProjKoinonia',
+        linkText: 'Coming Soon',
+        link: '',
         image: 'koinonia-mockup.png',
         DType: 'design',
         target: '_self'
@@ -79,7 +79,7 @@ class HomePage extends React.Component<{}> {
 
     componentDidMount() {
         AOS.init({
-            duration: 1000
+            duration: 1500
         })
     }
 
@@ -90,13 +90,13 @@ class HomePage extends React.Component<{}> {
                 <ScrollButton />
 
 
-                <ProjectHeader data-aos="fade-bottom">
+                <ProjectHeader data-aos="fade-up">
                     <h3> Welcome to the playground of my design and coding projects! </h3>
                 </ProjectHeader>
 
 
 
-                <ProjectGrid>
+                <ProjectGrid data-aos="fade-up">
                     <Project projects={project[0]} />
                     <Project projects={project[1]} />
                     <Project projects={project[2]} />

@@ -3,7 +3,6 @@ import { Nav, Navbar, NavItem, Row, Col } from 'react-bootstrap';
 import styled, { keyframes } from 'styled-components'
 import { Link } from 'react-router-dom'
 
-
 const Styles = styled.div`
   .navbar { 
       background-color: #222; }

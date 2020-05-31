@@ -28,6 +28,9 @@ justify-content: center;
 p {
     text-align:center;
 }
+img {
+    margin: 1.5em;
+}
 `
 
 const FullWidthImage = styled(Image)`

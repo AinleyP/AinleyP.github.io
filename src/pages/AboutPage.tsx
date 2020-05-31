@@ -2,10 +2,8 @@ import React from 'react'
 import { Image, Row, Col } from 'react-bootstrap';
 import styled from 'styled-components'
 import blobOne from '../assets/yellowblob1.png'
-import blobTwo from '../assets/yellowblob2.png'
-
-
-
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 
 const Container = styled.div`
 .bigboy {
@@ -39,16 +37,13 @@ const AboutText = styled.div`
         opacity: 0.7;
         position: absolute;
         z-index:-1;
-        left:6%;
-        top: 22%;
+        left:-7%;
+        top: -7%;
     }
     span {
         color: black;
     }
 }
-
-
-    
 
 `
 
@@ -80,57 +75,72 @@ padding:6em;
 margin-top:2%;
 `
 
-export default function AboutPage() {
-    return (
-        <React.Fragment>
-            <Container>
-
-                <Row className="bigboy">
-                    <AboutText>
-
-                        <h2>hello! <span>i'm ainley</span></h2>
-                        <p>
-                            I love storytelling - whether it’s through leading an audience through a spoken word or phrasing a
-                            musical melody. When it comes to both design and development, incorporating storytelling is my priority. There
-                            is a journey of walking alongside the user, navigating through the problem space, and executing the
-                                vision with a memorable and lasting impression. </p>
-                        <p>
-                            I am currently working as a Software Engineering Intern at Capital One and a Developer at UW Blueprint.
-                            I also have extensive knowledge in cloud infrastructure and deployment with certifications such as AWS Cloud Solutions Architect.
-                            I am a student from the University of Waterloo studying Systems Design Engineering and I am
-                            currently looking for a 4-month internship for Winter 2021!
-                            </p>
-                        <p>
-                            Let's chat! Feel free to contact me at aapena@uwaterloo.ca or check out my medium articles!
-                            </p>
-                    </AboutText>
+class AboutPage extends React.Component<{}> {
 
 
-                </Row>
-            </Container>
+    componentDidMount() {
+        AOS.init({
+            duration: 1500
+        })
+    }
 
-            <VerticalLine>
+    render() {
 
-            </VerticalLine>
+        return (
+            <React.Fragment>
+                <Container>
 
-            <MoreInfo>
+                    <Row className="bigboy" data-aos="fade-up">
+                        <AboutText>
 
-                <h3>A little more about me . . .</h3>
-                <MoreInfoGrid>
+                            <h2>hello! <span>i'm ainley</span></h2>
+                            <p>
+                                I love storytelling - whether it’s through leading an audience through a spoken word or phrasing a
+                                musical melody. When it comes to both design and development, incorporating storytelling is my priority. There
+                                is a journey of walking alongside the user, navigating through the problem space, and executing the
+                                    vision with a memorable and lasting impression. </p>
+                            <p>
+                                I am currently working as a Software Engineering Intern at Capital One and a Developer at UW Blueprint.
+                                I also have extensive knowledge in cloud infrastructure and deployment with certifications such as AWS Cloud Solutions Architect.
+                                I am a student from the University of Waterloo studying Systems Design Engineering and I am
+                                currently looking for a 4-month internship for Winter 2021!
+                                </p>
+                            <p>
+                                Let's chat! Feel free to contact me at aapena@uwaterloo.ca or check out my medium articles!
+                                </p>
+                        </AboutText>
 
-                    <MoreInfoImage fluid alt="spoken-word" src={require('../assets/spoken-word.png')} />
-                    <MoreInfoImage fluid alt="ultimate-frisbee" src={require('../assets/ulti-frisbee.png')} />
-                    <MoreInfoImage fluid alt="humanitarian-trip" src={require('../assets/dominican-trip.png')} />
 
-                </MoreInfoGrid>
+                    </Row>
+                </Container>
+
+                <VerticalLine>
+
+                </VerticalLine>
+
+                <MoreInfo>
+
+                    <h3>A little more about me . . .</h3>
+                    <MoreInfoGrid >
+
+                        <MoreInfoImage fluid alt="spoken-word" src={require('../assets/spoken-word.png')} />
+                        <MoreInfoImage fluid alt="ultimate-frisbee" src={require('../assets/ulti-frisbee.png')} />
+                        <MoreInfoImage fluid alt="humanitarian-trip" src={require('../assets/dominican-trip.png')} />
+
+                    </MoreInfoGrid>
 
 
-            </MoreInfo>
+                </MoreInfo>
 
 
 
 
 
-        </React.Fragment>
-    )
+            </React.Fragment >
+        )
+
+    }
+
 }
+
+export default AboutPage
