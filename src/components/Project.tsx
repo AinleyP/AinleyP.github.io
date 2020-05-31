@@ -22,12 +22,6 @@ box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
 border-radius: 8px;
 `
 
-const ImageContainer = styled.div`
-width:100% 
-height:100%
-`
-
-
 
 const LinkContainer = styled.a`
 `

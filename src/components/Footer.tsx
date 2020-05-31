@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FaGithub, FaEnvelope, FaLinkedinIn } from 'react-icons/fa'
+import { FaGithub, FaMediumM, FaLinkedinIn } from 'react-icons/fa'
 
 
 const FooterIcons = styled.div`
@@ -41,7 +41,7 @@ export default function Footer() {
                         <FaLinkedinIn />
                     </a>
                     <a href="https://github.com/AinleyP" rel="noopener noreferrer" target="_blank">
-                        <FaEnvelope />
+                        <FaMediumM />
                     </a>
 
                 </FooterIcons>

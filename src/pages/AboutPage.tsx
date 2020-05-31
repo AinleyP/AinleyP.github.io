@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Row, Col } from 'react-bootstrap';
+import { Image, Row } from 'react-bootstrap';
 import styled from 'styled-components'
 import blobOne from '../assets/yellowblob1.png'
 import AOS from 'aos'
